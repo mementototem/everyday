@@ -3,12 +3,16 @@ description = Simple, flexible, recolorable and responsive theme.
 version = VERSION
 core = 7.x
 
+stylesheets[all][] = css/bootstrap.min.css
+stylesheets[all][] = css/bootstrap-theme.min.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
 stylesheets[print][] = css/print.css
 
-regions[header] = Header
+scripts[] = js/bootstrap.min.js
+
+regions[header] = Header Menu
 regions[help] = Help
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
