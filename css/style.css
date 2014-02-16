@@ -1,0 +1,123 @@
+/* Global
+------------------------------------------------------------------- */
+body {
+  background: #fefefe;
+}
+
+/* Header
+------------------------------------------------------------------- */
+#header .container {
+  position: relative;
+}
+
+/* logo, site name, site slogan */
+#logo-and-name {
+  display: block;
+}
+#logo-and-name.have-menu {
+  padding-top: 30px;
+}
+#logo-and-name > a {
+  display: inline-block;
+}
+#site-logo {
+  display: block;
+}
+#name-and-slogan {
+  display: inline-block;
+  margin-left: 1em;
+}
+#site-name {
+  font-family: 'Ubuntu', serif;
+  font-size: 3em;
+  font-weight: bold;
+}
+#site-name a {
+  color: #333;
+  text-decoration: none;
+}
+#site-slogan {
+  font-family: 'Ubuntu', serif;
+}
+
+
+/* main menu */
+.navbar-everyday {
+  background: #2a7fff;
+  border-color: #2a7fff;
+  border-style: solid;
+  border-width: 1px 0;
+  border-radius: 0;
+  box-shadow: 0 1px 0 #fff inset, 0 -1px 0 #fff inset;
+  margin-top: 1em;
+}
+#main-menu {
+  padding: 0;
+}
+#main-menu-links {
+  font-family: 'Ubuntu', serif;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 auto;
+}
+#main-menu-links a {
+  color: #fff;
+  text-shadow: none;
+}
+#main-menu-links li.active {
+  background: #fff;
+}
+#main-menu-links a.active {
+  color: #000;
+}
+#main-menu-links a:hover {
+  color: #000;
+}
+
+/* secondary menu & header menu */
+#header-menu {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  left: 15px;
+}
+#header-menu ul li {
+  display: inline-block;
+  list-style: none;
+}
+#secondary-menu-links {
+  padding: 0;
+}
+#secondary-menu-links li {
+  padding-right: 0.5em;
+}
+.region-header > div {
+  display: inline-block;
+}
+.region-header label {
+  display: none;
+}
+.region-header #user-login-form div {
+  display: inline-block;
+}
+
+/* Footer
+------------------------------------------------------------------- */
+#footer-wrapper {
+  background: #e0e0e0;
+  border-top: 1px solid #fff;
+  box-shadow: 0 10px 0 #2a7fff inset, 0 11px 0 #fff inset;
+  padding-bottom: 1em;
+  margin-top: 2.5em;
+}
+#footer {
+  text-align: center;
+  padding: 2em 0;
+}
+#license {
+  font-size: 0.9em;
+  font-style: italic;
+  text-transform: lowercase;
+}
