@@ -17,9 +17,9 @@
           <?php endif; ?>
 
           <?php if ($site_name || $site_slogan): ?>
-            <div id="name-and-slogan"<?php if ($hide_site_name && $hide_site_slogan) { print ' class="visually-hidden"'; } ?>>
+            <div id="name-and-slogan"<?php if ($hide_site_name && $hide_site_slogan) { print ' class="sr-only"'; } ?>>
               <?php if ($site_name): ?>
-                <div id="site-name"<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
+                <div id="site-name"<?php if ($hide_site_name) { print ' class="sr-only"'; } ?>>
                   <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home">
                     <?php print $site_name; ?>
                   </a>
@@ -27,7 +27,7 @@
               <?php endif; ?>
               
               <?php if ($site_slogan): ?>
-                <div id="site-slogan"<?php if ($hide_site_slogan) { print ' class="element-invisible"'; } ?>>
+                <div id="site-slogan"<?php if ($hide_site_slogan) { print ' class="sr-only"'; } ?>>
                   <span><?php print $site_slogan; ?></span>
                 </div>
               <?php endif; ?>
@@ -35,32 +35,6 @@
           <?php endif; ?>
         </div>
       <?php endif; ?>
-      
-      <?php if ($secondary_menu || $page['header']): ?>
-        <div id="header-menu" >
-          <nav id="secondary-menu" class="navigation pull-left" role="navigation">
-            <?php print theme('links__system_secondary_menu', array(
-              'links'      => $secondary_menu,
-              'attributes' => array(
-                'id'    => 'secondary-menu-links',
-                'class' => array('links'),
-              ),
-              'heading'  => array(
-                'text'  => t('Secondary menu'),
-                'level' => 'h2',
-                'class' => array('element-invisible'),
-              ),
-            )); ?>
-          </nav>
-          
-          <?php if ($page['header']): ?>
-            <div class="pull-right">
-              <?php print render($page['header']); ?>
-            </div>
-          <?php endif; ?>
-        </div>
-      <?php endif; ?>
-    
     </div>
     
     <?php if ($main_menu): ?>
@@ -86,11 +60,38 @@
           'heading'    => array(
             'text'  => t('Main menu'),
             'level' => 'h2',
-            'class' => array('element-invisible'),
+            'class' => array('sr-only'),
           ),
         )); ?>
       </nav>
     </div></div>
+    <?php endif; ?>
+
+    <?php if ($secondary_menu || $page['header']): ?>
+      <div id="header-menu-wrapper">
+        <div id="header-menu" class="container">
+          <nav id="secondary-menu" class="navigation navbar-left" role="navigation">
+            <?php print theme('links__system_secondary_menu', array(
+              'links'      => $secondary_menu,
+              'attributes' => array(
+                'id'    => 'secondary-menu-links',
+                'class' => array('links'),
+              ),
+              'heading'  => array(
+                'text'  => t('Secondary menu'),
+                'level' => 'h2',
+                'class' => array('sr-only'),
+              ),
+            )); ?>
+          </nav>
+          
+          <?php if ($page['header']): ?>
+            <div class="pull-right">
+              <?php print render($page['header']); ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
     <?php endif; ?>
     
   </header>
